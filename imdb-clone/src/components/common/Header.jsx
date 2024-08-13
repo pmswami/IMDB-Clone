@@ -1,15 +1,24 @@
 import React from "react";
-import { AppBar, Toolbar } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Toolbar, styled } from "@mui/material";
+import { logoURL } from "../../constants/constant";
+
+const StyledToolbar = styled(Toolbar)`
+  // background: #121212;
+  min-height: 56px !important;
+  padding: 0 115px !important;
+`;
+
+const Logo = styled("img")({
+  width: 64,
+});
 
 function Header() {
   return (
     <>
       <AppBar>
-        <Toolbar></Toolbar>
+        <StyledToolbar>
+          <Logo src={logoURL} alt="logo" />
+        </StyledToolbar>
       </AppBar>
     </>
   );
