@@ -6,7 +6,6 @@ import {
   Box,
   Typography,
   InputBase,
-  colors,
 } from "@mui/material";
 import { logoURL } from "../../constants/constant";
 import { Menu, BookmarkAdd, ExpandMore } from "@mui/icons-material";
@@ -56,7 +55,7 @@ function Header() {
   };
   return (
     <>
-      <AppBar>
+      <AppBar position="static">
         <StyledToolbar>
           <Logo src={logoURL} alt="logo" />
           <Box onClick={handleClick}>
