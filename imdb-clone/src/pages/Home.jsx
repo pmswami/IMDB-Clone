@@ -5,6 +5,7 @@ import { NOWPLAYING_API_URL } from "../constants/constant";
 import { Box, styled } from "@mui/material";
 import Banner from "../components/Banner";
 import UpNext from "../components/UpNext";
+import Slide from "../components/Slide";
 
 const Wrapper = styled(Box)`
   display: flex;
@@ -34,6 +35,10 @@ const Home = () => {
           <Banner movies={movies} />
           <UpNext movies={movies} />
         </Wrapper>
+        <Slide movies={movies} />
+        <Slide movies={movies} />
+        <Slide movies={movies} />
+        <Slide movies={movies} />
       </Component>
     </>
   );
