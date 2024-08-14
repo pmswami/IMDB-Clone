@@ -10,6 +10,8 @@ import {
 import { logoURL } from "../../constants/constant";
 import { Menu, BookmarkAdd, ExpandMore } from "@mui/icons-material";
 import HeaderMenu from "./HeaderMenu";
+import { Navigate, useNavigate } from "react-router-dom";
+import { routhPath } from "../../constants/route";
 
 const StyledToolbar = styled(Toolbar)`
   // background: #121212;
@@ -47,6 +49,7 @@ const Logo = styled("img")({
 
 function Header() {
   const [open, setOpen] = useState(null);
+  const navigate = useNavigate();
   const handleClick = (e) => {
     setOpen(e.currentTarget);
   };
@@ -57,7 +60,11 @@ function Header() {
     <>
       <AppBar position="static">
         <StyledToolbar>
-          <Logo src={logoURL} alt="logo" />
+          <Logo
+            src={logoURL}
+            alt="logo"
+            onClick={() => navigate(routhPath.home)}
+          />
           <Box onClick={handleClick}>
             <Menu />
             <Typography>Menu</Typography>
